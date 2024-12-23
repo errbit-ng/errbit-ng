@@ -1,5 +1,6 @@
 # main
 
+* `bundle lock --normalize-platforms`
 * Update RubyGems to 3.6.2 & Bundler to 2.6.2
 * Update RubyGems to 3.6.1 & Bundler to 2.6.1
 * Replace poltergeist with selenium for tests
