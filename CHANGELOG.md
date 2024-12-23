@@ -1,5 +1,6 @@
 # main
 
+* Update RubyGems to 3.6.1 & Bundler to 2.6.1
 * Replace poltergeist with selenium for tests
 * Run tests on CI for Ruby 3.1, 3.2 and 3.3
 * Update Ruby to 3.3.6
