@@ -397,7 +397,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    regexp_parser (2.9.3)
+    regexp_parser (2.10.0)
     request_store (1.7.0)
       rack (>= 1.4)
     responders (3.1.1)
@@ -450,7 +450,7 @@ GEM
     rubocop-performance (1.23.0)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rails (2.27.0)
+    rubocop-rails (2.28.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.52.0, < 2.0)
@@ -785,7 +785,7 @@ CHECKSUMS
   rake (13.2.1) sha256=46cb38dae65d7d74b6020a4ac9d48afed8eb8149c040eccf0523bec91907059d
   rb-fsevent (0.11.2) sha256=43900b972e7301d6570f64b850a5aa67833ee7d87b458ee92805d56b7318aefe
   rb-inotify (0.11.1) sha256=a0a700441239b0ff18eb65e3866236cd78613d6b9f78fea1f9ac47a85e47be6e
-  regexp_parser (2.9.3) sha256=4b620657ed8349d82e1331a076415c79b9dd714a5546162ddd790ea9988f6379
+  regexp_parser (2.10.0) sha256=cb6f0ddde88772cd64bff1dbbf68df66d376043fe2e66a9ef77fcb1b0c548c61
   request_store (1.7.0) sha256=e1b75d5346a315f452242a68c937ef8e48b215b9453a77a6c0acdca2934c88cb
   responders (3.1.1) sha256=92f2a87e09028347368639cfb468f5fefa745cb0dc2377ef060db1cdd79a341a
   rest-client (2.1.0) sha256=35a6400bdb14fae28596618e312776c158f7ebbb0ccad752ff4fa142bf2747e3
@@ -801,7 +801,7 @@ CHECKSUMS
   rubocop (1.69.2) sha256=762fb0f30a379bf6054588d39f1815a2a1df8f067bc0337d3fe500e346924bb8
   rubocop-ast (1.37.0) sha256=9513ac88aaf113d04b52912533ffe46475de1362d4aa41141b51b2455827c080
   rubocop-performance (1.23.0) sha256=34ae78cb1bc5f1a0b34a34a1f9f6eec2cb8b8b9cafa2ce37982021e86fa49171
-  rubocop-rails (2.27.0) sha256=c3a6cef509539cdefe5043992ab3530610b1fecc3d67befe3ff0215b96f2f4fe
+  rubocop-rails (2.28.0) sha256=4967bed9ea13e6dcab566fea4265a6dd0381db739b305e48930aba1282da2715
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   ruby2_keywords (0.0.5) sha256=ffd13740c573b7301cf7a2e61fc857b2a8e3d3aff32545d6f8300d8bae10e3ef
   rubyzip (2.3.2) sha256=3f57e3935dc2255c414484fbf8d673b4909d8a6a57007ed754dde39342d2373f
