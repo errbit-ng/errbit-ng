@@ -97,7 +97,7 @@ gem "uglifier"
 gem "jquery-rails"
 gem "pjax_rails"
 gem "underscore-rails"
-gem "zeitwerk", "2.6.18"
+gem "zeitwerk", "2.7.1"
 
 gem "sucker_punch"
 
