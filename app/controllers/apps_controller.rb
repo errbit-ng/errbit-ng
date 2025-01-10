@@ -81,7 +81,6 @@ class AppsController < ApplicationController
     end
   end
 
-
   def destroy
     if app.destroy
       redirect_to apps_url, flash: {success: I18n.t("controllers.apps.flash.destroy.success")}
