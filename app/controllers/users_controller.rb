@@ -18,6 +18,9 @@ class UsersController < ApplicationController
   def new
   end
 
+  def edit
+  end
+
   def create
     if user.save
       flash[:success] = "#{user.name} is now part of the team. Be sure to add them as a project watcher."
