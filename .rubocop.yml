@@ -48,3 +48,7 @@ Rails/ActiveRecordAliases:
 # We don't use Active Record
 Rails/SkipsModelValidations:
   Enabled: false
+
+# We don't use Active Record
+Rails/WhereExists:
+  Enabled: false
