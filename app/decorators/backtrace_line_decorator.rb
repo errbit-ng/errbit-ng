@@ -71,30 +71,30 @@ class BacktraceLineDecorator < Draper::Decorator
 
   def link_to_hosted_javascript(app, text)
     return unless app.asset_host?
-    h.link_to(text, "#{app.asset_host}/#{file_relative}", target: "_blank")
+    h.link_to(text, "#{app.asset_host}/#{file_relative}", target: "_blank", rel: "noopener")
   end
 
   def link_to_github(app, text = nil)
     return unless app.github_repo?
     href = format("%s#L%s", app.github_url_to_file(decorated_path + file_name), number)
-    h.link_to(text || file_name, href, target: "_blank")
+    h.link_to(text || file_name, href, target: "_blank", rel: "noopener")
   end
 
   def link_to_bitbucket(app, text = nil)
     return unless app.bitbucket_repo?
     href = format("%s#%s-%s", app.bitbucket_url_to_file(decorated_path + file_name), file_name, number)
-    h.link_to(text || file_name, href, target: "_blank")
+    h.link_to(text || file_name, href, target: "_blank", rel: "noopener")
   end
 
   def link_to_custom_backtrace_url(app, text = nil)
     return unless app.custom_backtrace_url_template?
     href = app.custom_backtrace_url(decorated_path + file_name, number)
-    h.link_to(text || file_name, href, target: "_blank")
+    h.link_to(text || file_name, href, target: "_blank", rel: "noopener")
   end
 
   def link_to_issue_tracker_file(app, text = nil)
     return unless app.issue_tracker && app.issue_tracker.respond_to?(:url_to_file)
     href = app.issue_tracker.url_to_file(file_relative, number)
-    h.link_to(text || file_name, href, target: "_blank")
+    h.link_to(text || file_name, href, target: "_blank", rel: "noopener")
   end
 end
