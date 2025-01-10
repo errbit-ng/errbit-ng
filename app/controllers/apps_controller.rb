@@ -52,6 +52,10 @@ class AppsController < ApplicationController
     plug_params(app)
   end
 
+  def edit
+    plug_params(app)
+  end
+
   def create
     process_fingerprinter_choice
     initialize_subclassed_notification_service
@@ -77,9 +81,6 @@ class AppsController < ApplicationController
     end
   end
 
-  def edit
-    plug_params(app)
-  end
 
   def destroy
     if app.destroy
