@@ -12,11 +12,12 @@ class UsersController < ApplicationController
   def index
   end
 
+  def show
+  end
+
   def new
   end
 
-  def show
-  end
 
   def create
     if user.save
