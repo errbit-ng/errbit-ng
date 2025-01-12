@@ -82,6 +82,7 @@ class ProblemsController < ApplicationController
 
   def create_issue
     issue = Issue.new(problem: problem, user: current_user)
+
     issue.body = render_to_string(*issue.render_body_args)
 
     flash[:error] = issue.errors.full_messages.join(", ") unless issue.save
