@@ -63,6 +63,12 @@ gem "mutex_m"
 # Also please contact the author of activesupport-6.1.7.10 to request adding drb into its gemspec.
 gem "drb"
 
+# Also please contact the author of activesupport-6.1.7.10 to request adding benchmark into its gemspec.
+gem "benchmark"
+
+# Also please contact the author of activesupport-6.1.7.10 to request adding ostruct into its gemspec.
+gem "ostruct"
+
 group :development, :test do
   gem "airbrake", "~> 4.3.5", require: false
   gem "rubocop", require: false
