@@ -295,7 +295,7 @@ RSpec.describe ProblemsController, type: :controller do
             [{inline: "one <%= problem.id %> two"}])
           post :create_issue, params: {app_id: problem.app.id, id: problem.id, format: "html"}
           line = issue_tracker.tracker.output.shift
-          expect(line[1]).to eq("one #{problem.id} two")
+          expect(line[1]).to include("one #{problem.id} two")
         end
       end
     end

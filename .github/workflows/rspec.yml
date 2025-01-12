@@ -10,6 +10,9 @@ on:
   schedule:
     - cron: "0 21 * * 6"
 
+env:
+  CI: "true"
+
 jobs:
   rspec:
     runs-on: ubuntu-24.04

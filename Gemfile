@@ -2,8 +2,9 @@
 
 source "https://rubygems.org"
 
-gem "rails", "6.1.7.10"
+gem "rails", "7.0.8.7"
 
+gem "sprockets-rails"
 gem "activemodel-serializers-xml"
 gem "actionmailer_inline_css"
 gem "decent_exposure"
@@ -93,7 +94,6 @@ group :test do
 end
 
 gem "puma"
-gem "uglifier"
 gem "jquery-rails"
 gem "pjax_rails"
 gem "underscore-rails"
