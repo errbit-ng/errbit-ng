@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "issue_trackers/issue.txt.erb", type: :view do
+RSpec.describe "issue_trackers/markdown.erb", type: :view do
   let(:problem) do
     problem = Fabricate(:problem)
 
@@ -16,7 +16,7 @@ RSpec.describe "issue_trackers/issue.txt.erb", type: :view do
   end
 
   it "has the problem url" do
-    render template: "issue_trackers/issue", formats: [:txt]
+    render
 
     expect(rendered).to match(app_problem_url(problem.app, problem))
   end

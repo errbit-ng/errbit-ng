@@ -272,7 +272,7 @@ RSpec.describe ProblemsController, type: :controller do
 
       it "should renders the issue body" do
         post :create_issue, params: {app_id: problem.app.id, id: problem.id, format: "html"}
-        expect(response).to render_template("issue_trackers/issue")
+        expect(response).to render_template("issue_trackers/markdown")
       end
 
       it "should update the problem" do
