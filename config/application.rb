@@ -32,6 +32,9 @@ module Errbit
     # Custom directories with classes and modules you want to eager load.
     config.eager_load_paths << Rails.root.join("lib").to_s
 
+    # remove after migration to config.load_defaults 7.1
+    config.add_autoload_paths_to_load_path = false
+
     config.before_initialize do
       config.secret_key_base = Errbit::Config.secret_key_base
       config.public_file_server.enabled = Errbit::Config.serve_static_assets

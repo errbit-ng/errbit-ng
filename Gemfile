@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "rails", "7.0.8.7"
+gem "rails", "7.1.5.1"
 
 gem "sprockets-rails"
 gem "activemodel-serializers-xml"
@@ -11,8 +11,12 @@ gem "decent_exposure"
 gem "devise"
 gem "dotenv-rails"
 gem "draper"
-gem "errbit_plugin"
-gem "errbit_github_plugin"
+gem "errbit_plugin",
+  git: "https://github.com/errbit-ng/errbit-ng-plugin.git",
+  branch: "main"
+gem "errbit_github_plugin",
+  git: "https://github.com/errbit-ng/errbit-ng-github-plugin.git",
+  branch: "main"
 gem "font-awesome-rails"
 gem "haml"
 gem "htmlentities"
@@ -57,12 +61,6 @@ gem "rexml"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
-
-# Also please contact the author of activesupport-6.1.7.10 to request adding mutex_m into its gemspec.
-gem "mutex_m"
-
-# Also please contact the author of activesupport-6.1.7.10 to request adding drb into its gemspec.
-gem "drb"
 
 group :development, :test do
   gem "airbrake", "~> 4.3.5", require: false
