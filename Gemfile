@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "rails", "7.0.8.7"
+gem "rails", "7.1.5.1"
 
 gem "sprockets-rails"
 gem "activemodel-serializers-xml"
@@ -58,12 +58,6 @@ gem "rexml"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
 
-# Also please contact the author of activesupport-6.1.7.10 to request adding mutex_m into its gemspec.
-gem "mutex_m"
-
-# Also please contact the author of activesupport-6.1.7.10 to request adding drb into its gemspec.
-gem "drb"
-
 group :development, :test do
   gem "airbrake", "~> 4.3.5", require: false
   gem "rubocop", require: false
@@ -99,8 +93,6 @@ gem "pjax_rails"
 gem "underscore-rails"
 # pin zeitwerk gem to 2.6 for jruby support
 gem "zeitwerk", "2.6.18"
-# pin concurrent-ruby gem to 1.3.4 until rails 7.1 update
-gem "concurrent-ruby", "1.3.4"
 
 gem "sucker_punch"
 
