@@ -1,5 +1,7 @@
 # main
 
+* Update RubyGems to 3.6.3 & Bundler to 2.6.3
+* Update Ruby to 3.3.7
 * Update Rails to 7.0.8.7
 * `bundle lock --normalize-platforms`
 * Update RubyGems to 3.6.2 & Bundler to 2.6.2
