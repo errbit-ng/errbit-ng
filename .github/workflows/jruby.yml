@@ -44,4 +44,4 @@ jobs:
       - run: bin/rails zeitwerk:check
       - run: bin/rails assets:precompile
       - run: bin/rake errbit:bootstrap
-#      - run: bin/rspec
+      - run: bin/rspec
