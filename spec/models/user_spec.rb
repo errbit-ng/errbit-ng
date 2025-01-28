@@ -7,13 +7,13 @@ RSpec.describe User, type: :model do
     it "require that a name is present" do
       user = Fabricate.build(:user, name: nil)
       expect(user).to_not be_valid
-      expect(user.errors[:name]).to include("can't be blank")
+      expect(user.errors[:name]).to eq(["can't be blank"])
     end
 
     it "requires password without github login" do
       user = Fabricate.build(:user, password: nil)
       expect(user).to_not be_valid
-      expect(user.errors[:password]).to include("can't be blank")
+      expect(user.errors[:password]).to eq(["can't be blank"])
     end
 
     it "doesn't require password with github login" do
@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
       user2 = Fabricate.build(:user, github_login: "nashby")
       user2.save
       expect(user2).to_not be_valid
-      expect(user2.errors[:github_login]).to include("has already been taken")
+      expect(user2.errors[:github_login]).to eq(["has already been taken"])
     end
 
     it "allows blank / null github_login" do
@@ -49,7 +49,7 @@ RSpec.describe User, type: :model do
     it "should require a password with minimum of 6 characters" do
       user = Fabricate.build(:user)
       user.reset_password("12345", "12345")
-      expect(user.errors[:password]).to include("is too short (minimum is 6 characters)", "is too short (minimum is 6 characters)")
+      expect(user.errors[:password]).to eq(["is too short (minimum is 6 characters)"])
     end
   end
 
@@ -60,7 +60,7 @@ RSpec.describe User, type: :model do
         require Rails.root.join("db/seeds.rb")
       end.to change {
         User.where(admin: true).count
-      }.from(0).to(1)
+      }.by(1)
     end
   end
 end
