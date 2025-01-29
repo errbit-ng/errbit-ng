@@ -3,36 +3,11 @@
 require "rails_helper"
 
 RSpec.describe Errbit::Version do
-  let(:version) { "0.0.0" }
-
-  context "release version" do
-    subject { Errbit::Version.new(version).full_version }
-
-    it "generates a release version" do
-      expect(subject).to eq(version)
-    end
-
-    it "does not use a commit sha" do
-      allow(ENV).to receive(:[]).with("SOURCE_VERSION") { "abcd1234efgh56789" }
-      expect(subject).to eq(version)
-    end
+  describe ".to_a" do
+    it { expect(described_class.to_a).to eq([0, 1, 0]) }
   end
 
-  context "dev version" do
-    subject { Errbit::Version.new(version, true).full_version }
-
-    it "generates a dev version" do
-      expect(subject).to end_with("dev")
-    end
-
-    it "handles a missing commit sha" do
-      allow(ENV).to receive(:[]).with("SOURCE_VERSION") { nil }
-      expect(subject).to end_with("dev")
-    end
-
-    it "shortens a present commit sha" do
-      allow(ENV).to receive(:[]).with("SOURCE_VERSION") { "abcd1234efgh56789" }
-      expect(subject).to end_with("dev-abcd1234")
-    end
+  describe ".to_s" do
+    it { expect(described_class.to_s).to eq("0.1.0") }
   end
 end
