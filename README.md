@@ -5,12 +5,12 @@ This is fork of [errbit](https://github.com/errbit/errbit).
 ## Tech Stack
 
 * Ruby 3.3
-* Ruby on Rails 7.0
+* Ruby on Rails 8.0
 
 ## Features
 
 * Modern Ruby 3.3 or later
-* Modern Ruby on Rails 7.0. 7.1+ upgrade in progress.
+* Modern Ruby on Rails 8.0
 
 ## Fork goals
 
