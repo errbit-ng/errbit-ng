@@ -1,5 +1,6 @@
 # main
 
+* Remove `sucker_punch` gem
 * Update RubyGems to 3.6.3 & Bundler to 2.6.3
 * Update Ruby to 3.3.7
 * Update Rails to 7.0.8.7

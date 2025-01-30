@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "rails", "7.0.8.7"
+gem "rails", "8.0.1"
 
 gem "sprockets-rails"
 gem "activemodel-serializers-xml"
@@ -11,8 +11,12 @@ gem "decent_exposure"
 gem "devise"
 gem "dotenv-rails"
 gem "draper"
-gem "errbit_plugin"
-gem "errbit_github_plugin"
+gem "errbit_plugin",
+  git: "https://github.com/errbit-ng/errbit-ng-plugin.git",
+  branch: "main"
+gem "errbit_github_plugin",
+  git: "https://github.com/errbit-ng/errbit-ng-github-plugin.git",
+  branch: "main"
 gem "font-awesome-rails"
 gem "haml"
 gem "htmlentities"
@@ -58,12 +62,6 @@ gem "rexml"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
 
-# Also please contact the author of activesupport-6.1.7.10 to request adding mutex_m into its gemspec.
-gem "mutex_m"
-
-# Also please contact the author of activesupport-6.1.7.10 to request adding drb into its gemspec.
-gem "drb"
-
 group :development, :test do
   gem "airbrake", "~> 4.3.5", require: false
   gem "rubocop", require: false
@@ -98,8 +96,6 @@ gem "jquery-rails"
 gem "pjax_rails"
 gem "underscore-rails"
 gem "zeitwerk", "2.6.18"
-
-gem "sucker_punch"
 
 # TODO: enable this later
 # ENV['USER_GEMFILE'] ||= './UserGemfile'
