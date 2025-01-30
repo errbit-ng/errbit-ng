@@ -4,7 +4,7 @@ This is fork of [errbit](https://github.com/errbit/errbit).
 
 ## Tech Stack
 
-* Ruby 3.3 or JRuby 9.4.10.0
+* Ruby 3.3 or JRuby 9.4.11.0
 * Ruby on Rails 7.0
 
 ## Features
