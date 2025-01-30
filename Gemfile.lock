@@ -556,6 +556,7 @@ PLATFORMS
   arm64-linux
   java
   ruby
+  universal-java
   x86-linux
   x86-linux-gnu
   x86-linux-musl
