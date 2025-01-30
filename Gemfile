@@ -100,7 +100,7 @@ gem "underscore-rails"
 # pin zeitwerk gem to 2.6 for jruby support
 gem "zeitwerk", "2.6.18"
 # pin concurrent-ruby gem to 1.3.4 until rails 7.1 update
-gem "concurrent-ruby", "1.3.4"
+gem "concurrent-ruby", "1.3.5"
 
 gem "sucker_punch"
 
