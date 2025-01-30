@@ -87,7 +87,7 @@ RSpec.describe Mailer do
       end
     else
       it "should have links to source files" do
-        expect(email).to have_body_text('<a href="http://example.com/path/to/file.js" target="_blank">path/to/file.js rel="noopener"')
+        expect(email).to have_body_text('<a href="http://example.com/path/to/file.js" rel="noopener" target="_blank">path/to/file.js')
       end
     end
 
