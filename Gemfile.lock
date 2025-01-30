@@ -571,6 +571,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   campy
   capybara
+  concurrent-ruby (= 1.3.4)
   decent_exposure
   devise
   dotenv-rails
