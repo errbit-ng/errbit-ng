@@ -11,9 +11,7 @@ gem "decent_exposure"
 gem "devise"
 gem "dotenv-rails"
 gem "draper"
-gem "errbit-ng-plugin",
-  git: "https://github.com/errbit-ng/errbit-ng-plugin.git",
-  branch: "main"
+gem "errbit-ng-plugin"
 gem "errbit_github_plugin"
 gem "font-awesome-rails"
 gem "haml"
