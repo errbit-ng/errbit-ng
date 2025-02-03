@@ -159,10 +159,10 @@ GEM
       htmlentities (~> 4.3.3)
       launchy (>= 2.1, < 4.0)
       mail (~> 2.7)
-    errbit_github_plugin (0.3.0)
-      errbit_plugin
+    errbit-ng-github-plugin (0.1.0)
+      errbit-ng-plugin
       octokit
-    errbit_plugin (0.6.0)
+    errbit-ng-plugin (0.1.0)
     erubi (1.13.1)
     fabrication (2.31.0)
     faraday (2.12.2)
@@ -621,8 +621,8 @@ DEPENDENCIES
   dotenv-rails
   draper
   email_spec
-  errbit_github_plugin
-  errbit_plugin
+  errbit-ng-github-plugin
+  errbit-ng-plugin
   fabrication
   flowdock
   font-awesome-rails
@@ -723,8 +723,8 @@ CHECKSUMS
   draper (4.0.4) sha256=acf3d7f4d5b28fd0e3b9fad9a0692f9a990e119362b802b92852362f9535b85e
   drb (2.2.1) sha256=e9d472bf785f558b96b25358bae115646da0dbfd45107ad858b0bc0d935cb340
   email_spec (2.3.0) sha256=df23be7a131186f7a3d5be3b35eaac9196f9ac13bd26c9c3d59341e13d852d11
-  errbit_github_plugin (0.3.0) sha256=96391948fae85fe3aaed78efa598791a8f16187e39e7038ca00bc137a266cc92
-  errbit_plugin (0.6.0) sha256=ec4a7567333e3771802805e6c8e901fdfdbb9d576bbcc2af91573694cea89b15
+  errbit-ng-github-plugin (0.1.0) sha256=fad60a2a52008513784e004e8c4367fd0ac10a43b3a48b8fbd099796c43c759d
+  errbit-ng-plugin (0.1.0) sha256=676b4e50afc45eed88b74e1acb117e28a9a0a79baaa0f43839e572362eb6a48f
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
   fabrication (2.31.0) sha256=2c79f10d1b88034a2ebd47ce77acba66847fc4636581c8282b3408adc68e85aa
   faraday (2.12.2) sha256=157339c25c7b8bcb739f5cf1207cb0cefe8fa1c65027266bcbc34c90c84b9ad6
