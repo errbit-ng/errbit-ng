@@ -2,14 +2,14 @@
 
 source "https://rubygems.org"
 
-gem "rails", "7.1.5.1"
+gem "rails", "7.2.2.1"
 
 gem "sprockets-rails"
 gem "activemodel-serializers-xml"
 gem "actionmailer_inline_css"
 gem "decent_exposure"
 gem "devise"
-gem "dotenv-rails"
+gem "dotenv-rails", "2.8.1"
 gem "draper"
 gem "errbit_plugin"
 gem "errbit_github_plugin"

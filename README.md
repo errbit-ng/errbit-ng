@@ -5,12 +5,12 @@ This is fork of [errbit](https://github.com/errbit/errbit).
 ## Tech Stack
 
 * Ruby 3.3 or JRuby 9.4.11.0
-* Ruby on Rails 7.1
+* Ruby on Rails 7.2
 
 ## Features
 
-* Modern Ruby 3.1 or later
-* Modern Ruby on Rails 7.1. 7.2+ upgrade in progress.
+* Modern Ruby 3.1 or later (3.1 for JRuby support)
+* Modern Ruby on Rails 7.2.
 * First Class JRuby support (in progress. Tests OK, next -- docker image). For errbit-ng itself on jruby and applications running on jruby.
 
 ## Fork goals
