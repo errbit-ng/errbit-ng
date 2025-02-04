@@ -40,8 +40,6 @@ RUN RAILS_ENV=production bundle exec rake assets:precompile \
 
 ENV RAILS_ENV=production
 
-ENV RAILS_LOG_TO_STDOUT=true
-
 ENV RAILS_SERVE_STATIC_FILES=true
 
 EXPOSE 3000/tcp
