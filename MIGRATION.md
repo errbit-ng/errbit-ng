@@ -1,5 +1,7 @@
 # Errbit to Errbit-NG migration guide
 
+## Errbit-NG 0.1.0
+
 In current moment, errbit-ng should be drop in replacement for errbit.
 With few exceptions:
 
