@@ -2,6 +2,7 @@
 .env
 db/*.sqlite3
 log/*.log
+!log/.gitkeep
 tmp/**/*
 tmp/*
 config/config.yml
@@ -9,14 +10,5 @@ config/deploy.rb
 config/deploy
 config/mongoid.yml
 config/newrelic.yml
-.rvmrc
 .idea
-*~
-*.rbc
-.DS_Store
-*.rbx
 coverage
-*#
-.tool-versions
-NOTES
-*.swp
