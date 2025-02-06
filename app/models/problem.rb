@@ -169,7 +169,7 @@ class Problem
   def recache
     CACHED_NOTICE_ATTRIBUTES.each do |k, v|
       # clear all cached attributes
-      send("#{k}=", {})
+      send(:"#{k}=", {})
 
       # find only notices related to this problem
       Notice.collection.find.aggregate([
