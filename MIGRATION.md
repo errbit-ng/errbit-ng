@@ -12,6 +12,9 @@ With few exceptions:
 5. `MAX_THREADS` env was removed. Use default rails `RAILS_MAX_THREADS` and `RAILS_MIN_THREADS`.
 6. Add `RAILS_LOG_LEVEL` env with default `info`.
 7. `RAILS_LOG_TO_STDOUT` env was drop without replacement. This is default behavior now.
+8. Add default rails health check at `/up`.
+9. Drop `/health/readiness` in favor `/up`.
+10. Drop `/health/liveness` in favor `/up`.
 
 Deprecations:
 
