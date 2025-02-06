@@ -55,6 +55,9 @@ gem "pry-rails"
 # Ruby 3.1 + Rails 6.1
 gem "rexml"
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: [:windows, :jruby]
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
 
