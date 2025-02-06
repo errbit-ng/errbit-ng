@@ -1,5 +1,16 @@
 # main
 
+* Add default rails health check at `/up`
+* Drop `/health/readiness` in favor `/up`
+* Drop `/health/liveness` in favor `/up`
+* It should be safe just remove `PORT` env from any configurations.
+* You should not set `RACK_ENV` env if you don't know for what. It should be removed from any configurations.
+* `MAX_THREADS` env was removed. Use default rails `RAILS_MAX_THREADS` and `RAILS_MIN_THREADS`.
+* Add `RAILS_LOG_LEVEL` env with default `info`.
+* `RAILS_LOG_TO_STDOUT` env was drop without replacement. This is default behavior now.
+* Add `tzinfo-data` gem
+* Update Rails to 7.2.2.1
+* Update Rails to 7.1.5.1
 * Update RubyGems to 3.6.3 & Bundler to 2.6.3
 * Update Ruby to 3.3.7
 * Update Rails to 7.0.8.7
