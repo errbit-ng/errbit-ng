@@ -12,23 +12,29 @@ LABEL maintainer="Ihor Zubkov <igor.zubkov@gmail.com>"
 WORKDIR /rails
 
 # Install base packages
-RUN set -eux; \
+RUN set -eux ; \
     apt-get update -qq ; \
     apt-get dist-upgrade -qq ; \
-    apt-get install --no-install-recommends -y curl libjemalloc2 libyaml-dev ; \
+    apt-get install --no-install-recommends -y curl libjemalloc2 libyaml-dev shared-mime-info ; \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Set production environment
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
-    BUNDLE_WITHOUT="development"
+    BUNDLE_WITHOUT="development" \
+    BOOTSNAP_LOG="true" \
+    BOOTSNAP_READONLY="true"
+
+RUN set -eux ; \
+    gem update --system "3.6.3" ; \
+    gem install bundler --version "2.6.3" --force
 
 # Throw-away build stage to reduce size of final image
 FROM base AS build
 
 # Install packages needed to build gems
-RUN set -eux; \
+RUN set -eux ; \
     apt-get update -qq ; \
     apt-get install --no-install-recommends -y build-essential git pkg-config ; \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
@@ -36,7 +42,7 @@ RUN set -eux; \
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 COPY vendor /rails/vendor/
-RUN set -eux; \
+RUN set -eux ; \
     bundle install ; \
     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git ; \
     bundle exec bootsnap precompile --gemfile
@@ -58,7 +64,7 @@ COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
 COPY --from=build /rails /rails
 
 # Run and own only the runtime files as a non-root user for security
-RUN set -eux; \
+RUN set -eux ; \
     groupadd --system --gid 1000 rails ; \
     useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash ; \
     chown -R rails:rails db log storage tmp
