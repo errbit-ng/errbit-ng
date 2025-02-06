@@ -152,7 +152,7 @@ class Problem
         digest = Digest::MD5.hexdigest(notice.send(v))
         field = "#{k}.#{digest}"
 
-        if (doc[k].try(:[], digest).try(:[], :count)).to_i > 1
+        if doc[k].try(:[], digest).try(:[], :count).to_i > 1
           doc.inc("#{field}.count" => -1)
         else
           # TODO: check why?
