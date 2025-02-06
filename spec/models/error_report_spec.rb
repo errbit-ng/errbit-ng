@@ -259,17 +259,20 @@ RSpec.describe ErrorReport, type: :model do
         let(:email_at_notices) { [0] }
 
         it "sends email on 1st occurrence" do
-          1.times { described_class.new(xml).generate_notice! }
+          described_class.new(xml).generate_notice!
+
           expect(ActionMailer::Base.deliveries.length).to eq(1)
         end
 
         it "sends email on 2nd occurrence" do
           2.times { described_class.new(xml).generate_notice! }
+
           expect(ActionMailer::Base.deliveries.length).to eq(2)
         end
 
         it "sends email on 3rd occurrence" do
           3.times { described_class.new(xml).generate_notice! }
+
           expect(ActionMailer::Base.deliveries.length).to eq(3)
         end
       end
@@ -278,17 +281,20 @@ RSpec.describe ErrorReport, type: :model do
         let(:email_at_notices) { [1, 3] }
 
         it "sends email on 1st occurrence" do
-          1.times { described_class.new(xml).generate_notice! }
+          described_class.new(xml).generate_notice!
+
           expect(ActionMailer::Base.deliveries.length).to eq(1)
         end
 
         it "does not send email on 2nd occurrence" do
           2.times { described_class.new(xml).generate_notice! }
+
           expect(ActionMailer::Base.deliveries.length).to eq(1)
         end
 
         it "sends email on 3rd occurrence" do
           3.times { described_class.new(xml).generate_notice! }
+
           expect(ActionMailer::Base.deliveries.length).to eq(2)
         end
 
@@ -297,6 +303,7 @@ RSpec.describe ErrorReport, type: :model do
             notice = described_class.new(xml).generate_notice!
             notice.problem.resolve!
           end
+
           expect(ActionMailer::Base.deliveries.length).to eq(3)
         end
       end
