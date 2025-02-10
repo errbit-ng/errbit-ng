@@ -39,7 +39,8 @@ jobs:
           ruby-version: ${{ matrix.ruby }}
           rubygems: latest
           bundler: latest
-          bundler-cache: true
+          bundler-cache: false
+      - run: gem install jar-dependencies -v "= 0.5.4" && bundle
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@90004df786821b6308fb02299e5835d0dae05d0d # 1.12.0
         with:
