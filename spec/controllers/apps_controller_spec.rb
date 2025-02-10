@@ -271,8 +271,8 @@ RSpec.describe AppsController, type: :controller do
 
       context "changing email_at_notices" do
         before do
-          allow(Errbit::Config)
-            .to receive(:per_app_email_at_notices).and_return(true)
+          allow(Errbit::Config).to receive(:per_app_email_at_notices)
+            .and_return(true)
         end
 
         it "should parse legal csv values" do
