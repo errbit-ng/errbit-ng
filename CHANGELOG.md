@@ -1,5 +1,6 @@
 # main
 
+* Remove `rack-ssl-enforcer` gem
 * Add default rails health check at `/up`
 * Drop `/health/readiness` in favor `/up`
 * Drop `/health/liveness` in favor `/up`

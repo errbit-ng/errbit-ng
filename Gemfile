@@ -24,7 +24,6 @@ gem "omniauth-rails_csrf_protection"
 gem "omniauth-github"
 gem "omniauth-google-oauth2"
 gem "rack-ssl", require: "rack/ssl" # force SSL
-gem "rack-ssl-enforcer", require: false
 gem "rails_autolink"
 gem "useragent"
 gem "uri"
