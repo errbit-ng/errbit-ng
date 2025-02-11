@@ -1,5 +1,6 @@
 # Configuring Errbit
-Following the recommendation of [12factor.net](http://12factor.net/config),
+
+Following the recommendation of [12factor.net](https://12factor.net/config),
 Errbit takes all of its configuration from environment variables. You can use
 [dotenv](https://github.com/bkeepers/dotenv), which is included in the Gemfile,
 to fill in any values that you can't or won't supply through the environment.
