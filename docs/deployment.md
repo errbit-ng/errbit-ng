@@ -1,7 +1,7 @@
 # Deployment
 
 There are any number of ways to deploy Errbit-NG, but official support is
-docker with compose plugin.
+Docker with Compose plugin.
 
 See specific notes on deployment via:
 

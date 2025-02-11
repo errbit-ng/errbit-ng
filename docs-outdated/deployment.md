@@ -8,11 +8,6 @@ See specific notes on deployment via:
 - [docker](deployment/docker.md)
 - [kubernetes (experimental)](deployment/kubernetes.md)
 
-You can use a process manager to deploy Errbit, but Errbit doesn't maintain
-support for any specific process manager. But if you use systemd, @nofxx has
-been kind enough to share:
-- [systemd config](https://gist.github.com/nofxx/f01dcfe3e9d504181d76)
-
 ## HTTPS
 
 Errbit can be deployed with HTTPS in a couple different ways.
