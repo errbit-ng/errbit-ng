@@ -1,6 +1,6 @@
 # Errbit to Errbit-NG migration guide
 
-## From Errbit main to Errbit-NG 0.1.0
+## From Errbit main to Errbit-NG 1.0.0
 
 In current moment, errbit-ng should be drop in replacement for errbit.
 With few exceptions:
@@ -15,6 +15,9 @@ With few exceptions:
 8. Add default rails health check at `/up`.
 9. Drop `/health/readiness` in favor `/up`.
 10. Drop `/health/liveness` in favor `/up`.
+11. Remove `ERRBIT_PROTOCOL` env. Errbit-NG should always run behind reverse-proxy with HTTPS support.
+12. Remove `ERRBIT_PORT` env. Errbit-NG always enforce HTTPS. So, you can't set port. It is already 443 and can't be changed.
+13. Remove `ERRBIT_ENFORCE_SSL` env. This is new default behaviour.
 
 Deprecations:
 
