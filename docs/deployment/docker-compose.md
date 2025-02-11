@@ -1,8 +1,8 @@
 # Deploy with Docker Compose
 
-Errbit-NG provides official [Docker](https://www.docker.com/) images to
-make Docker deployment easy. You can pass all of [Errbit's
-configuration](/docs/configuration.md) to the Docker container.
+Errbit-NG provides official [Docker](https://www.docker.com/) images to make
+Docker deployment easy. You can pass all of
+[Errbit-NG's configuration](/docs/configuration.md) to the Docker container.
 
 When running Errbit using `docker run` you must specify a MONGO_URL. If you're
 running in a production environment, you should also specify
@@ -10,15 +10,60 @@ RACK_ENV=production and SECRET_KEY_BASE=some-secret-key.
 
 If you don't already have one, you can generate a suitable SECRET_KEY_BASE
 with:
+
 ```bash
 docker run --rm errbit/errbit bundle exec rake secret
 ```
 
-## Which image version should I use?
+## Examples
 
-As of 2023, we are not releasing non-latest tags to docker hub (last release was v0.9.0 in 2020).
-Please use [errbit/errbit:latest](https://hub.docker.com/r/errbit/errbit/tags), which is updated on main builds.
-If you are interested in using official release tags of errbit, contributions to the CI process and shipping stable releases would be welcome.
+### Tiny as possible instance
+
+If you wanna try Errbit-NG, this is good example.
+
+```yaml
+services:
+  errbit:
+    image: "docker.io/biow0lf/errbit-ng:main"
+    container_name: "errbit"
+    restart: "unless-stopped"
+    environment:
+      MONGO_URL: "mongodb://errbit_mongodb:27017/errbit_production"
+      SECRET_KEY_BASE: "<rails secret>"
+      RAILS_MAX_THREADS: "1"
+      RAILS_MIN_THREADS: "1"
+```
+
+### Small instance as I run in production
+
+```yaml
+services:
+  errbit:
+    image: "docker.io/biow0lf/errbit-ng:main"
+    container_name: "errbit"
+    restart: "unless-stopped"
+    environment:
+      MONGO_URL: "mongodb://errbit_mongodb:27017/errbit_production"
+      SECRET_KEY_BASE: "<rails secret>"
+      RAILS_MAX_THREADS: "2"
+      RAILS_MIN_THREADS: "2"
+```
+
+### Huge instance if you need
+
+```yaml
+services:
+  errbit:
+    image: "docker.io/biow0lf/errbit-ng:main"
+    container_name: "errbit"
+    restart: "unless-stopped"
+    environment:
+      MONGO_URL: "mongodb://errbit_mongodb:27017/errbit_production"
+      SECRET_KEY_BASE: "<rails secret>"
+      RAILS_MAX_THREADS: "2"
+      RAILS_MIN_THREADS: "2"
+      WEB_CONCURRENCY: "2"
+```
 
 ## Standalone Errbit App
 
