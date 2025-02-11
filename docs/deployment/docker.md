@@ -1,9 +1,8 @@
-# Deploy with Docker
+# Deploy with Docker Compose
 
-Errbit provides official [Docker](https://www.docker.com/) images to
+Errbit-NG provides official [Docker](https://www.docker.com/) images to
 make Docker deployment easy. You can pass all of [Errbit's
-configuration](/docs/configuration.md) to the Docker container using
-`docker run -e`.
+configuration](/docs/configuration.md) to the Docker container.
 
 When running Errbit using `docker run` you must specify a MONGO_URL. If you're
 running in a production environment, you should also specify

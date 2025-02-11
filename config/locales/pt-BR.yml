@@ -24,8 +24,8 @@ pt-BR:
     been_deleted: excluído(s)
   layouts:
     application:
-      title: 'Errbit'
-      errbit: 'Errbit'
+      title: 'Errbit-NG'
+      errbit: 'Errbit-NG'
       powered_html: "Powered by %{link} : the open source error catcher."
 
   shared:
@@ -194,7 +194,7 @@ pt-BR:
       all_users_notified: "Todos os usuários serão notificados quando algo acontecer."
       api_key: "Chave de Acesso da API:"
       are_you_sure: 'Está certo disto?'
-      atom_title: "Notificações do Errbit para %{name} em %{host}"
+      atom_title: "Notificações do Errbit-NG para %{name} em %{host}"
       edit: editar
       environment: Ambiente
       errors: Erros

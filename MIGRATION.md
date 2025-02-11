@@ -1,20 +1,23 @@
 # Errbit to Errbit-NG migration guide
 
-## From Errbit main to Errbit-NG 0.1.0
+## From Errbit main to Errbit-NG 1.0.0
 
 In current moment, errbit-ng should be drop in replacement for errbit.
 With few exceptions:
 
-1. Default port (`PORT` env) changed to 3000 (sync rails defaults) for puma.
+1. Default port (`PORT` env) changed to 3000 (sync with rails defaults) for puma.
 2. Default port in docker image is changed to 3000 (sync with rails defaults).
 3. It should be safe just remove `PORT` env from any configurations.
 4. You should not set `RACK_ENV` env if you don't know for what. It should be removed from any configurations.
-5. `MAX_THREADS` env was removed. Use default rails `RAILS_MAX_THREADS` and `RAILS_MIN_THREADS`.
+5. `MAX_THREADS` env was removed. Use default rails `RAILS_MAX_THREADS`.
 6. Add `RAILS_LOG_LEVEL` env with default `info`.
 7. `RAILS_LOG_TO_STDOUT` env was drop without replacement. This is default behavior now.
 8. Add default rails health check at `/up`.
 9. Drop `/health/readiness` in favor `/up`.
 10. Drop `/health/liveness` in favor `/up`.
+11. Remove `ERRBIT_PROTOCOL` env. Errbit-NG should always run behind reverse-proxy with HTTPS support.
+12. Remove `ERRBIT_PORT` env. Errbit-NG always enforce HTTPS. So, you can't set port. It is already 443 and can't be changed.
+13. Remove `ERRBIT_ENFORCE_SSL` env. This is new default behaviour.
 
 Deprecations:
 
