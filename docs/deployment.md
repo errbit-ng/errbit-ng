@@ -11,3 +11,7 @@ See specific notes on deployment via:
 
 1. We don't recommend run `puma` with https support.
 2. We recommend run errbit-ng from docker images behind reverse-proxy with HTTPS support (ACME).
+
+## Health check
+
+Default Rails health check at `/up`. If you need.
