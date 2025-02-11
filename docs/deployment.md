@@ -6,3 +6,8 @@ Docker with Compose plugin.
 See specific notes on deployment via:
 
 * [docker compose](deployment/docker-compose.md)
+
+## HTTPS and ACME
+
+1. We don't recommend run `puma` with https support.
+2. We recommend run errbit-ng from docker images behind reverse-proxy with HTTPS support (ACME).
