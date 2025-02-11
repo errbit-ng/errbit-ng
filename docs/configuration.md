@@ -12,3 +12,9 @@ In order of precedence Errbit-NG uses:
 3. Default values from `.env.default` file
 
 ## Configuration Parameters
+
+| Environment variable | Description | Default | Default in container |
+|----------------------|-------------|---------|----------------------|
+| `RAILS_ENV`          |             |         |                      |
+| `PORT`               |             |         |                      |
+| `RAILS_MAX_THREADS`  |             |         |                      |
