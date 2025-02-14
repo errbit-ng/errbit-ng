@@ -3,16 +3,20 @@
 require "rails_helper"
 
 RSpec.describe Noticed::Notification, type: :model do
-  describe "#params" do
+  describe "delegates params to event" do
     subject { create(:noticed_notification) }
 
-    specify { expect(subject.event.params).to eq(subject.params) }
+    it { expect(subject.params).to eq(subject.event.params) }
   end
 
-  # test "delegates record to event" do
-  #   notification = noticed_notifications(:one)
-  #   assert_equal notification.event.record, notification.record
-  # end
+  describe "delegates record to event" do
+    subject { create(:noticed_notification) }
+
+    it { expect(subject.record).to eq(subject.event.record) }
+  end
+
+  describe "notification associations" do
+  end
 
   # test "notification associations" do
   #   assert_equal 1, users(:one).notifications.count
