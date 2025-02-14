@@ -7,7 +7,5 @@ module Noticed
     include Noticed::Deliverable
     include Noticed::Translation
     include Rails.application.routes.url_helpers
-
-
   end
 end
