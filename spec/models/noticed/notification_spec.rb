@@ -16,11 +16,12 @@ RSpec.describe Noticed::Notification, type: :model do
   end
 
   describe "notification associations" do
-  end
+    let!(:user) { create(:user) }
 
-  # test "notification associations" do
-  #   assert_equal 1, users(:one).notifications.count
-  # end
+    before { create(:noticed_notification, recipient: user) }
+
+    it { expect(user.notifications.count).to eq(1) }
+  end
 
   # test "read scope" do
   #   assert_equal 4, Noticed::Notification.read.count
