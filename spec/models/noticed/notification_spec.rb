@@ -35,13 +35,17 @@ RSpec.describe Noticed::Notification, type: :model do
     it { expect(Noticed::Notification.unread.count).to eq(0) }
   end
 
-  # test "seen scope" do
-  #   assert_equal 4, Noticed::Notification.seen.count
-  # end
+  describe "seen scope" do
+    before { create_list(:noticed_notification, 4, seen_at: Time.current) }
 
-  # test "unseen scope" do
-  #   assert_equal 0, Noticed::Notification.unseen.count
-  # end
+    it { expect(Noticed::Notification.seen.count).to eq(4) }
+  end
+
+  describe "unseen scope" do
+    before { create_list(:noticed_notification, 4, seen_at: Time.current) }
+
+    it { expect(Noticed::Notification.unseen.count).to eq(0) }
+  end
 
   # test "mark_as_read" do
   #   Noticed::Notification.update_all(read_at: nil)
