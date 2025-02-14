@@ -2,6 +2,7 @@
 
 class User
   PER_PAGE = 30
+
   include Mongoid::Document
   include Mongoid::Timestamps
 
@@ -48,6 +49,8 @@ class User
     field :username
     validates :username, presence: true
   end
+
+  has_many :notifications, as: :recipient, class_name: "Noticed::Notification", dependent: :destroy
 
   def self.valid_google_domain?(email)
     return true if Errbit::Config.google_authorized_domains.nil?
