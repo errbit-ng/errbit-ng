@@ -9,11 +9,6 @@ RSpec.describe Noticed::Notification, type: :model do
     specify { expect(subject.event.params).to eq(subject.params) }
   end
 
-  # test "delegates params to event" do
-  #   notification = noticed_notifications(:one)
-  #   assert_equal notification.event.params, notification.params
-  # end
-
   # test "delegates record to event" do
   #   notification = noticed_notifications(:one)
   #   assert_equal notification.event.record, notification.record
