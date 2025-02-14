@@ -7,6 +7,7 @@ module Noticed
     include Translation
     include Rails.application.routes.url_helpers
 
+    field :type, type: String
     field :params, type: Hash, default: {}
 
     belongs_to :record, polymorphic: true, optional: true
