@@ -60,6 +60,7 @@ gem "tzinfo-data", platforms: [:windows, :jruby]
 gem "bootsnap", ">= 1.4.4", require: false
 
 group :development, :test do
+  gem "factory_bot_rails"
   gem "airbrake", "~> 4.3.5", require: false
   gem "rubocop", require: false
   gem "rubocop-performance", require: false
