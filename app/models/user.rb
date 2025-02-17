@@ -49,7 +49,7 @@ class User
     validates :username, presence: true
   end
 
-  has_many :notifications, as: :recipient, class_name: "Noticed::Notification", dependent: :delete_all
+  has_many :notifications, as: :recipient, class_name: "Noticed::Notification", dependent: :destroy
 
   def self.valid_google_domain?(email)
     return true if Errbit::Config.google_authorized_domains.nil?
@@ -63,12 +63,14 @@ class User
     user = User.where(email: data["email"]).first
 
     unless user
-      user = User.create(name:       data["name"],
-        email:      data["email"],
+      user = User.create(
+        name: data["name"],
+        email: data["email"],
         google_uid: access_token.uid,
-        password:   Devise.friendly_token[0, 20]
+        password: Devise.friendly_token[0, 20]
       )
     end
+
     user
   end
 
