@@ -113,6 +113,10 @@ RSpec.describe Noticed::Notification, type: :model do
     it { expect(CommentNotifier::Notification.new.root_url).to eq("http://localhost:3000/") }
   end
 
+  describe "ephemeral notification url helpers" do
+    it { expect(EphemeralNotifier::Notification.new.root_url).to eq("http://localhost:3000/") }
+  end
+
   # test "ephemeral notification url helpers" do
   #   assert_equal "http://localhost:3000/", EphemeralNotifier::Notification.new.root_url
   # end
