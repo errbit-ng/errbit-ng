@@ -49,6 +49,8 @@ class User
     validates :username, presence: true
   end
 
+  has_many :notifications, as: :recipient, class_name: "Noticed::Notification", dependent: :delete_all
+
   def self.valid_google_domain?(email)
     return true if Errbit::Config.google_authorized_domains.nil?
     match_data = /.+@(?<domain>.+)$/.match(email)
