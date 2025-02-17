@@ -77,12 +77,12 @@ module Noticed
     #   !read_at?
     # end
 
-    # def seen?
-    #   seen_at?
-    # end
+    def seen?
+      seen_at?
+    end
 
-    # def unseen?
-    #   !seen_at?
-    # end
+    def unseen?
+      !seen_at?
+    end
   end
 end

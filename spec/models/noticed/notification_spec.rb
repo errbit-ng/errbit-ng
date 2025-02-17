@@ -101,13 +101,17 @@ RSpec.describe Noticed::Notification, type: :model do
   #   assert_not noticed_notifications(:one).unread?
   # end
 
-  # test "seen?" do
-  #   assert noticed_notifications(:one).seen?
-  # end
+  describe "seen?" do
+    subject { create(:noticed_notification, seen_at: Time.current) }
 
-  # test "unseen?" do
-  #   assert_not noticed_notifications(:one).unseen?
-  # end
+    it { expect(subject.seen?).to eq(true) }
+  end
+
+  describe "unseen?" do
+    subject { create(:noticed_notification, seen_at: nil) }
+
+    it { expect(subject.unseen?).to eq(true) }
+  end
 
   describe "notification url helpers" do
     it { expect(CommentNotifier::Notification.new.root_url).to eq("http://localhost:3000/") }
@@ -116,8 +120,4 @@ RSpec.describe Noticed::Notification, type: :model do
   describe "ephemeral notification url helpers" do
     it { expect(EphemeralNotifier::Notification.new.root_url).to eq("http://localhost:3000/") }
   end
-
-  # test "ephemeral notification url helpers" do
-  #   assert_equal "http://localhost:3000/", EphemeralNotifier::Notification.new.root_url
-  # end
 end
