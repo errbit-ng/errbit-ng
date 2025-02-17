@@ -12,9 +12,9 @@ module Noticed
     end
 
     class_methods do
-      # def mark_as_read_and_seen(**kwargs)
-      #   update_all(**kwargs.with_defaults(read_at: Time.current, seen_at: Time.current, updated_at: Time.current))
-      # end
+      def mark_as_read_and_seen(**kwargs)
+        update_all(**kwargs.with_defaults(read_at: Time.current, seen_at: Time.current, updated_at: Time.current))
+      end
 
       def mark_as_unread_and_unseen(**kwargs)
         update_all(**kwargs.with_defaults(read_at: nil, seen_at: nil, updated_at: Time.current))
