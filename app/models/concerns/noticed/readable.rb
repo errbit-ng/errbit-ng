@@ -69,13 +69,13 @@ module Noticed
     #   update!(seen_at: nil)
     # end
 
-    # def read?
-    #   read_at?
-    # end
+    def read?
+      read_at?
+    end
 
-    # def unread?
-    #   !read_at?
-    # end
+    def unread?
+      !read_at?
+    end
 
     def seen?
       seen_at?

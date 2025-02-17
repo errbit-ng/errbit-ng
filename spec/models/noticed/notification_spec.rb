@@ -93,13 +93,17 @@ RSpec.describe Noticed::Notification, type: :model do
   #   assert_equal 0, Noticed::Notification.seen.count
   # end
 
-  # test "read?" do
-  #   assert noticed_notifications(:one).read?
-  # end
+  describe "read?" do
+    subject { create(:noticed_notification, read_at: Time.current) }
 
-  # test "unread?" do
-  #   assert_not noticed_notifications(:one).unread?
-  # end
+    it { expect(subject.read?).to eq(true) }
+  end
+
+  describe "unread?" do
+    subject { create(:noticed_notification, read_at: nil) }
+
+    it { expect(subject.unread?).to eq(true) }
+  end
 
   describe "seen?" do
     subject { create(:noticed_notification, seen_at: Time.current) }
