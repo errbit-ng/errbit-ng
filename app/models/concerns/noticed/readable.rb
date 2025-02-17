@@ -28,9 +28,9 @@ module Noticed
         update_all(**kwargs.with_defaults(read_at: nil, updated_at: Time.current))
       end
 
-      # def mark_as_seen(**kwargs)
-      #   update_all(**kwargs.with_defaults(seen_at: Time.current, updated_at: Time.current))
-      # end
+      def mark_as_seen(**kwargs)
+        update_all(**kwargs.with_defaults(seen_at: Time.current, updated_at: Time.current))
+      end
 
       # def mark_as_unseen(**kwargs)
       #   update_all(**kwargs.with_defaults(seen_at: nil, updated_at: Time.current))
