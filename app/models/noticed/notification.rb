@@ -13,7 +13,7 @@ module Noticed
     belongs_to :event, counter_cache: true
     belongs_to :recipient, polymorphic: true
 
-    scope :newest_first, -> { order(created_at: :desc) }
+    # scope :newest_first, -> { order(created_at: :desc) }
 
     delegate :params, :record, to: :event
   end

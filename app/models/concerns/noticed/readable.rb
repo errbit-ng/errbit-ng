@@ -20,9 +20,9 @@ module Noticed
         update_all(**kwargs.with_defaults(read_at: nil, seen_at: nil, updated_at: Time.current))
       end
 
-      # def mark_as_read(**kwargs)
-      #   update_all(**kwargs.with_defaults(read_at: Time.current, updated_at: Time.current))
-      # end
+      def mark_as_read(**kwargs)
+        update_all(**kwargs.with_defaults(read_at: Time.current, updated_at: Time.current))
+      end
 
       # def mark_as_unread(**kwargs)
       #   update_all(**kwargs.with_defaults(read_at: nil, updated_at: Time.current))

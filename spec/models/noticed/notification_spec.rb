@@ -47,12 +47,17 @@ RSpec.describe Noticed::Notification, type: :model do
     it { expect(Noticed::Notification.unseen.count).to eq(0) }
   end
 
-  # test "mark_as_read" do
-  #   Noticed::Notification.update_all(read_at: nil)
-  #   assert_equal 0, Noticed::Notification.read.count
-  #   Noticed::Notification.mark_as_read
-  #   assert_equal 4, Noticed::Notification.read.count
-  # end
+  describe "mark_as_read" do
+    before { create_list(:noticed_notification, 4, read_at: nil) }
+
+    it do
+      expect(Noticed::Notification.read.count).to eq(0)
+
+      Noticed::Notification.mark_as_read
+
+      expect(Noticed::Notification.read.count).to eq(4)
+    end
+  end
 
   # test "mark_as_unread" do
   #   Noticed::Notification.update_all(read_at: Time.current)
