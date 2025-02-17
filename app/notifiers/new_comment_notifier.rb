@@ -11,4 +11,13 @@ class NewCommentNotifier < ApplicationNotifier
 
     config.if = -> { !!recipient.preferences[:email] }
   end
+
+  deliver_by :slack do |config|
+    config.url = "https://slack.com..."
+    config.json = -> {
+      {
+        # ...
+      }
+    }
+  end
 end
