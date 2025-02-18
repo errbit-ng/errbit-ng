@@ -1,5 +1,6 @@
 # main
 
+* Drop Flowdock support (it's not working anymore)
 * Remove `rack-ssl` gem
 * Remove `rack-ssl-enforcer` gem
 * Add default rails health check at `/up`
