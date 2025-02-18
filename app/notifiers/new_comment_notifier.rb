@@ -3,6 +3,7 @@
 # To deliver this notification:
 #
 # NewCommentNotifier.with(record: @comment, message: "New comment").deliver(User.all)
+# NewCommentNotifier.with(record: @comment).deliver(User.all)
 
 class NewCommentNotifier < ApplicationNotifier
   deliver_by :email do |config|
@@ -19,5 +20,26 @@ class NewCommentNotifier < ApplicationNotifier
         # ...
       }
     }
+  end
+
+  deliver_by :pushover do |config|
+    config.url = "https://api.pushover.net/1/messages.json"
+    config.json = -> {
+      {
+        token: "",
+        user: "",
+        message: ""
+      }
+    }
+  end
+
+  def message
+    "New comment"
+  end
+
+  class << self
+    def with(record:)
+
+    end
   end
 end

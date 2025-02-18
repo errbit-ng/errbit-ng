@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
 module Noticed
-  class Event
-    include Mongoid::Document
-    include Mongoid::Timestamps
-
+  class Event < ApplicationRecord
     field :type, type: String
     field :params, type: Hash, default: {}
     field :notifications_count, type: Integer

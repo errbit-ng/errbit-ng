@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
 module Noticed
-  class Notification
-    include Mongoid::Document
-    include Mongoid::Timestamps
-
+  class Notification < ApplicationRecord
     field :type, type: String
     field :read_at, type: Time
     field :seen_at, type: Time
