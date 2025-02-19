@@ -58,7 +58,6 @@ class NotificationService
   end
 
   def url
-    nil
   end
 
   # Retrieve tracker label from either class or instance.
