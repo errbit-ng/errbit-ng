@@ -10,36 +10,30 @@ class NewCommentNotifier < ApplicationNotifier
     config.mailer = "Mailer"
     config.method = :comment_notification
 
-    config.if = -> { !!recipient.preferences[:email] }
+    # config.if = -> { !!recipient.preferences[:email] }
   end
 
-  deliver_by :slack do |config|
-    config.url = "https://slack.com..."
-    config.json = -> {
-      {
-        # ...
-      }
-    }
-  end
+  # deliver_by :slack do |config|
+  #   config.url = "https://slack.com..."
+  #   config.json = -> {
+  #     {
+  #       # ...
+  #     }
+  #   }
+  # end
 
-  deliver_by :pushover do |config|
-    config.url = "https://api.pushover.net/1/messages.json"
-    config.json = -> {
-      {
-        token: "",
-        user: "",
-        message: ""
-      }
-    }
-  end
+  # deliver_by :pushover do |config|
+  #   config.url = "https://api.pushover.net/1/messages.json"
+  #   config.json = -> {
+  #     {
+  #       token: "",
+  #       user: "",
+  #       message: ""
+  #     }
+  #   }
+  # end
 
-  def message
-    "New comment"
-  end
-
-  class << self
-    def with(record:)
-
-    end
-  end
+  # def message
+  #   "New comment"
+  # end
 end
