@@ -2,6 +2,8 @@
 
 module Noticed
   class Event < ApplicationRecord
+    include Deliverable
+
     field :type, type: String
     field :params, type: Hash, default: {}
     field :notifications_count, type: Integer
