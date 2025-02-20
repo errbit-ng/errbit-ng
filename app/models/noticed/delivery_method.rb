@@ -2,5 +2,6 @@
 
 module Noticed
   class DeliveryMethod < Noticed::ApplicationJob
+    include RequiredOptions
   end
 end
