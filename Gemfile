@@ -58,6 +58,7 @@ gem "tzinfo-data", platforms: [:windows, :jruby]
 gem "bootsnap", ">= 1.4.4", require: false
 
 group :development, :test do
+  gem "fabrication"
   gem "airbrake", "~> 4.3.5", require: false
   gem "rubocop", require: false
   gem "rubocop-performance", require: false
@@ -76,7 +77,6 @@ group :test do
   gem "rspec-rails", require: false
   gem "rspec-activemodel-mocks"
   gem "mongoid-rspec", require: false
-  gem "fabrication"
   gem "capybara"
   gem "selenium-webdriver"
   gem "launchy"
