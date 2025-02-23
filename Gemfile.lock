@@ -589,7 +589,6 @@ PLATFORMS
   java
   ruby
   universal-java
-  universal-java-23
   x86-linux
   x86-linux-gnu
   x86-linux-musl
