@@ -48,7 +48,3 @@ RSpec.configure do |config|
 
   config.infer_spec_type_from_file_location!
 end
-
-def jruby?
-  ::JRUBY_VERSION if ::RUBY_PLATFORM == "java"
-end
