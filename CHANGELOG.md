@@ -1,5 +1,8 @@
 # main
 
+* Devise: passwords must be at least 8 characters long
+* Devise: bcrypt cost 11 -> 12
+* Update RubyGems to 3.6.5 & Bundler to 2.6.5
 * Drop Flowdock support (it's not working anymore)
 * Remove `rack-ssl` gem
 * Remove `rack-ssl-enforcer` gem
