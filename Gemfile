@@ -74,6 +74,7 @@ group :test do
   gem "rake"
   gem "rspec"
   gem "rspec-rails", require: false
+  gem "rspec-pending_for"
   gem "rspec-activemodel-mocks"
   gem "mongoid-rspec", require: false
   gem "fabrication"
