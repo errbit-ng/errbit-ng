@@ -5,7 +5,7 @@ require "rails_helper"
 RSpec.describe ProblemsHelper, type: :helper do
   describe "#auto_link_format" do
     it "handles links with target and wraps paragraph" do
-      pending_for(engine: "jruby")
+      skip_for(engine: "jruby")
 
       expect(
         helper.auto_link_format("Goto https://errbit.com/ and say hello to team@errbit.invalid")
@@ -13,7 +13,7 @@ RSpec.describe ProblemsHelper, type: :helper do
     end
 
     it "handles links with target and wraps paragraph" do
-      pending_for(engine: "ruby")
+      skip_for(engine: "ruby")
 
       expect(
         helper.auto_link_format("Goto https://errbit.com/ and say hello to team@errbit.invalid")
