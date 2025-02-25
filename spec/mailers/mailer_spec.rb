@@ -82,13 +82,13 @@ RSpec.describe Mailer do
     end
 
     it "should have links to source files" do
-      pending_for(engine: "jruby")
+      skip_for(engine: "jruby")
 
       expect(email).to have_body_text('<a target="_blank" rel="noopener" href="http://example.com/path/to/file.js">path/to/file.js')
     end
 
     it "should have links to source files" do
-      pending_for(engine: "ruby")
+      skip_for(engine: "ruby")
 
       expect(email).to have_body_text('<a href="http://example.com/path/to/file.js" rel="noopener" target="_blank">path/to/file.js')
     end
