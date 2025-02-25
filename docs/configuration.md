@@ -15,12 +15,13 @@ In order of precedence Errbit-NG uses:
 
 ### Basic rails configuration
 
-| Environment variable | Description       | Default       | Default in container |
-|----------------------|-------------------|---------------|----------------------|
-| `RAILS_ENV`          | Environment       | `development` | `production`         |
-| `PORT`               | Port              | `3000`        | as default           |
-| `RAILS_MAX_THREADS`  | Rails max threads | `3`           | as default           |
-| `WEB_CONCURRENCY`    | Number of CPU     | not set       | not set              |
+| Environment variable | Description        | Default       | Default in container |
+|----------------------|--------------------|---------------|----------------------|
+| `RAILS_ENV`          | Environment        | `development` | `production`         |
+| `PORT`               | Port               | `3000`        | as default           |
+| `RAILS_MAX_THREADS`  | Rails max threads  | `3`           | as default           |
+| `WEB_CONCURRENCY`    | Number of CPU      | not set       | not set              |
+| `RAILS_LOG_LEVEL`    | Rails logger level | `info`        | `info`               |
 
 ### Application configuration
 
