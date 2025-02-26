@@ -8,12 +8,13 @@ updates:
     allow:
       - dependency-type: "direct"
       - dependency-type: "indirect"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
 
-  - package-ecosystem: docker
-    directory: /
+  - package-ecosystem: "docker"
+    directory: "/"
     schedule:
-      interval: daily
+      interval: "daily"
