@@ -96,6 +96,5 @@ gem "zeitwerk", "2.6.18"
 
 gem "sucker_punch"
 
-# TODO: enable this later
-# ENV['USER_GEMFILE'] ||= './UserGemfile'
-# eval_gemfile ENV['USER_GEMFILE'] if File.exist?(ENV['USER_GEMFILE'])
+user_gemfile = "./UserGemfile"
+eval_gemfile user_gemfile if File.exist?(user_gemfile)

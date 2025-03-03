@@ -1,5 +1,6 @@
 # main
 
+* Remove `USER_GEMFILE` env. From now, it's always `UserGemfile`.
 * Remove `ERRBIT_LOG_LEVEL` env. Use rails `RAILS_LOG_LEVEL` env instead.
 * Devise: passwords must be at least 8 characters long
 * Devise: bcrypt cost 11 -> 12
