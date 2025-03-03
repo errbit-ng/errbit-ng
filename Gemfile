@@ -96,4 +96,4 @@ gem "zeitwerk", "2.6.18"
 
 gem "sucker_punch"
 
-eval_gemfile "./UserGemfile" if File.exist?("./UserGemfile")
+eval_gemfile "./UserGemfile"
