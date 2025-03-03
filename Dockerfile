@@ -40,7 +40,7 @@ RUN set -eux ; \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Install application gems
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile Gemfile.lock UserGemfile ./
 COPY vendor /rails/vendor/
 RUN set -eux ; \
     bundle install ; \
