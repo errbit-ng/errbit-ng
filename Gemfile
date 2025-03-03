@@ -92,7 +92,7 @@ gem "jquery-rails"
 gem "pjax_rails"
 gem "underscore-rails"
 # pin zeitwerk gem to 2.6 for jruby support
-gem "zeitwerk", "2.6.18"
+gem "zeitwerk", "2.7.2"
 
 gem "sucker_punch"
 
