@@ -2,6 +2,7 @@
 
 class User
   PER_PAGE = 30
+
   include Mongoid::Document
   include Mongoid::Timestamps
 
@@ -49,6 +50,8 @@ class User
     validates :username, presence: true
   end
 
+  has_many :notifications, as: :recipient, class_name: "Noticed::Notification", dependent: :destroy
+
   def self.valid_google_domain?(email)
     return true if Errbit::Config.google_authorized_domains.nil?
     match_data = /.+@(?<domain>.+)$/.match(email)
@@ -61,12 +64,14 @@ class User
     user = User.where(email: data["email"]).first
 
     unless user
-      user = User.create(name:       data["name"],
-        email:      data["email"],
+      user = User.create(
+        name: data["name"],
+        email: data["email"],
         google_uid: access_token.uid,
-        password:   Devise.friendly_token[0, 20]
+        password: Devise.friendly_token[0, 20]
       )
     end
+
     user
   end
 
