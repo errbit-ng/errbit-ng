@@ -339,7 +339,7 @@ GEM
       omniauth (~> 2.0)
     optimist (3.2.1)
     orm_adapter (0.5.0)
-    parallel (1.26.3)
+    parallel (1.27.0)
     parser (3.3.7.3)
       ast (~> 2.4.1)
       racc
@@ -552,7 +552,6 @@ GEM
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.24.0)
     stringio (3.1.6)
-    stringio (3.1.6-java)
     sucker_punch (3.2.0)
       concurrent-ruby (~> 1.0)
     super_diff (0.15.0)
@@ -815,7 +814,7 @@ CHECKSUMS
   omniauth-rails_csrf_protection (1.0.2) sha256=1170fd672aff092b9b7ebebc1453559f073ed001e3ce62a1df616e32f8dc5fe0
   optimist (3.2.1) sha256=8cf8a0fd69f3aa24ab48885d3a666717c27bc3d9edd6e976e18b9d771e72e34e
   orm_adapter (0.5.0) sha256=aa5d0be5d540cbb46d3a93e88061f4ece6a25f6e97d6a47122beb84fe595e9b9
-  parallel (1.26.3) sha256=d86babb7a2b814be9f4b81587bf0b6ce2da7d45969fab24d8ae4bf2bb4d4c7ef
+  parallel (1.27.0) sha256=4ac151e1806b755fb4e2dc2332cbf0e54f2e24ba821ff2d3dcf86bf6dc4ae130
   parser (3.3.7.3) sha256=5803acc132cf1155fac2656bf02d3fb9223dccd66f1aa538dac095b785fa4d64
   patience_diff (1.2.0) sha256=f492094486af02fff4a80070fa6b4d0ebbcf4d42fb38bba29d095eef43f6822c
   pjax_rails (0.5.1) sha256=3cb4b53d874de1349014aaae2cb879c8924ec86d68f3054a0d958c995b0c8ddb
@@ -888,7 +887,6 @@ CHECKSUMS
   standard-custom (1.0.2) sha256=424adc84179a074f1a2a309bb9cf7cd6bfdb2b6541f20c6bf9436c0ba22a652b
   standard-performance (1.7.0) sha256=c46a9aef3348c0cfc03053ed9a1c1f73b967f7e4edcdf30dac0101b143897314
   stringio (3.1.6) sha256=292c495d1657adfcdf0a32eecf12a60e6691317a500c3112ad3b2e31068274f5
-  stringio (3.1.6-java) sha256=dbdb1ee4e6d75782bbc7e8cc7d84cd05e592df50494f363011cc7cd48153bbf7
   sucker_punch (3.2.0) sha256=8eeb8d59254210f85b57fc9534c5a64f5e7d7498060dd6b9b50e33a89b100567
   super_diff (0.15.0) sha256=1c857c27ea49ed57685ce05897efc35839d169e74a30fca1a97e7a401f0cb914
   temple (0.10.3) sha256=df3145fe6577af1e25387eb7f7122d32ed51bdb6f2e7bb0f4fbf07b66151913b
