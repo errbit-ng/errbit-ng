@@ -288,26 +288,26 @@ GEM
     netrc (0.11.0)
     nio4r (2.7.4)
     nio4r (2.7.4-java)
-    nokogiri (1.18.6)
+    nokogiri (1.18.8)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.18.6-aarch64-linux-gnu)
+    nokogiri (1.18.8-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.6-aarch64-linux-musl)
+    nokogiri (1.18.8-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.6-arm-linux-gnu)
+    nokogiri (1.18.8-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.6-arm-linux-musl)
+    nokogiri (1.18.8-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.6-arm64-darwin)
+    nokogiri (1.18.8-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.6-java)
+    nokogiri (1.18.8-java)
       racc (~> 1.4)
-    nokogiri (1.18.6-x86_64-darwin)
+    nokogiri (1.18.8-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.6-x86_64-linux-gnu)
+    nokogiri (1.18.8-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.6-x86_64-linux-musl)
+    nokogiri (1.18.8-x86_64-linux-musl)
       racc (~> 1.4)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
@@ -552,7 +552,6 @@ GEM
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.24.0)
     stringio (3.1.6)
-    stringio (3.1.6-java)
     sucker_punch (3.2.0)
       concurrent-ruby (~> 1.0)
     super_diff (0.15.0)
@@ -796,16 +795,16 @@ CHECKSUMS
   netrc (0.11.0) sha256=de1ce33da8c99ab1d97871726cba75151113f117146becbe45aa85cb3dabee3f
   nio4r (2.7.4) sha256=d95dee68e0bb251b8ff90ac3423a511e3b784124e5db7ff5f4813a220ae73ca9
   nio4r (2.7.4-java) sha256=eaa37458dc182a075ea3ad48cddd27823f2e306498acceab17062069d0f387d3
-  nokogiri (1.18.6) sha256=4d283431d7829719ea1287ca388f24c6ce343af736bbcbd1365cbdb83bce41a4
-  nokogiri (1.18.6-aarch64-linux-gnu) sha256=1b11f9a814068282cc2b47ebe61395b2a69d1918092d2ca3bd664074f72540e9
-  nokogiri (1.18.6-aarch64-linux-musl) sha256=797662f201c37a8feac3bd5b0c0e3447053bc71e6633d273fefd4c68b03e6a54
-  nokogiri (1.18.6-arm-linux-gnu) sha256=2da07a07ef4c9d9e9da809b3dc0937ed90b031e32c2c658d9918941b85d68b95
-  nokogiri (1.18.6-arm-linux-musl) sha256=e8ae1c9a4d8cfa7a92d632a6f596a88235ebe66d4b70418543378ba16c601f70
-  nokogiri (1.18.6-arm64-darwin) sha256=727a441d179d934b4b7c73e0e28e6723ee46463d96bb0cc6e2e33a13540962c4
-  nokogiri (1.18.6-java) sha256=bf16c53446987007ff3e1deb29d65d20444073ba112cb5bddbd2671135ba293c
-  nokogiri (1.18.6-x86_64-darwin) sha256=fb72568c97ccd90a8d68cb765b0ff0720b109bd62e3babbf372e854ef8fef995
-  nokogiri (1.18.6-x86_64-linux-gnu) sha256=df065db6ba6e1e80f76ef04f860fcf260cc24685125fe33cdc3d1572a1c66b71
-  nokogiri (1.18.6-x86_64-linux-musl) sha256=75ec7a93cec54687aa63b2eaf830dc4ac5b4f3d8c969f20c035e67c9e6a30cef
+  nokogiri (1.18.8) sha256=8c7464875d9ca7f71080c24c0db7bcaa3940e8be3c6fc4bcebccf8b9a0016365
+  nokogiri (1.18.8-aarch64-linux-gnu) sha256=36badd2eb281fca6214a5188e24a34399b15d89730639a068d12931e2adc210e
+  nokogiri (1.18.8-aarch64-linux-musl) sha256=664e0f9a77a7122a66d6c03abba7641ca610769a4728db55ee1706a0838b78a2
+  nokogiri (1.18.8-arm-linux-gnu) sha256=17de01ca3adf9f8e187883ed73c672344d3dbb3c260f88ffa1008e8dc255a28e
+  nokogiri (1.18.8-arm-linux-musl) sha256=6e6d7e71fc39572bd613a82d528cf54392c3de1ba5ce974f05c832b8187a040b
+  nokogiri (1.18.8-arm64-darwin) sha256=483b5b9fb33653f6f05cbe00d09ea315f268f0e707cfc809aa39b62993008212
+  nokogiri (1.18.8-java) sha256=41002596960ff854198a20aaeb34cff0d445406d5ad85ba7ca9c3fd0c8f03de0
+  nokogiri (1.18.8-x86_64-darwin) sha256=024cdfe7d9ae3466bba6c06f348fb2a8395d9426b66a3c82f1961b907945cc0c
+  nokogiri (1.18.8-x86_64-linux-gnu) sha256=4a747875db873d18a2985ee2c320a6070c4a414ad629da625fbc58d1a20e5ecc
+  nokogiri (1.18.8-x86_64-linux-musl) sha256=ddd735fba49475a395b9ea793bb6474e3a3125b89960339604d08a5397de1165
   oauth2 (2.0.9) sha256=b21f9defcf52dc1610e0dfab4c868342173dcd707fd15c777d9f4f04e153f7fb
   octokit (9.2.0) sha256=4fa47ff35ce654127edf2c836ab9269bcc8829f5542dc1e86871f697ce7f4316
   omniauth (2.1.3) sha256=8d24e2e55c41926c96e4a93fd566bc026dfd6f2c850408748e89945a565956c2
@@ -888,7 +887,6 @@ CHECKSUMS
   standard-custom (1.0.2) sha256=424adc84179a074f1a2a309bb9cf7cd6bfdb2b6541f20c6bf9436c0ba22a652b
   standard-performance (1.7.0) sha256=c46a9aef3348c0cfc03053ed9a1c1f73b967f7e4edcdf30dac0101b143897314
   stringio (3.1.6) sha256=292c495d1657adfcdf0a32eecf12a60e6691317a500c3112ad3b2e31068274f5
-  stringio (3.1.6-java) sha256=dbdb1ee4e6d75782bbc7e8cc7d84cd05e592df50494f363011cc7cd48153bbf7
   sucker_punch (3.2.0) sha256=8eeb8d59254210f85b57fc9534c5a64f5e7d7498060dd6b9b50e33a89b100567
   super_diff (0.15.0) sha256=1c857c27ea49ed57685ce05897efc35839d169e74a30fca1a97e7a401f0cb914
   temple (0.10.3) sha256=df3145fe6577af1e25387eb7f7122d32ed51bdb6f2e7bb0f4fbf07b66151913b
